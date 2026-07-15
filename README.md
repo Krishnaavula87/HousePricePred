@@ -1,26 +1,46 @@
-# House Price Prediction — Mini Project
+# House Price Prediction (Internship Project)
 
-Internship-style mini project using the Ames Housing dataset (`data.csv`).
+Predict residential **SalePrice** from the Ames Housing dataset (`data.csv`), based on the repo materials:
+- `house prices.docx` — feature dictionary / data description
+- `PRCP-1017-AutoPricePred (4).docx` — internship task structure (EDA, modeling, comparison, challenges)
+- `About_the_Project.md` — project overview
 
-## Problem
-Predict house `SalePrice` from property features and explain how prices vary with those features.
+> Note: The PRCP brief uses a car-price example, but this repository’s dataset is **house prices**. This project applies the same internship deliverables to the house-price data provided here.
 
-## Deliverables (single notebook)
-As per project documentation, all work is in **`House_Price_Prediction.ipynb`**:
+## Notebooks
 
-1. Complete data analysis (EDA) report  
-2. Predictive modeling for sale price  
-3. Model comparison report + production recommendation  
-4. Challenges faced and techniques used  
+| Notebook | Description |
+|----------|-------------|
+| **`House_Price_Prediction_Internship.ipynb`** | Full internship notebook (EDA, models including XGBoost, comparison, challenges) |
+| **`House_Price_Prediction.ipynb`** | Mini-project notebook (EDA, models, comparison, challenges) |
 
-## How to run
+Both follow the required structure:
+1. Complete data analysis (EDA) report
+2. Predictive models for `SalePrice`
+3. Model comparison report + production recommendation
+4. Challenges faced + techniques used
+
+## Setup
 
 ```bash
 pip install -r requirements.txt
+jupyter notebook House_Price_Prediction_Internship.ipynb
+```
+
+Or open the mini-project notebook:
+
+```bash
 jupyter notebook House_Price_Prediction.ipynb
 ```
 
-## Data
-- `data.csv` — housing features and `SalePrice`
-- `house prices.docx` — field descriptions / data dictionary
-- Project task structure adapted from the PRCP mini-project guidelines document in this repo
+## Models compared
+
+- Linear Regression, Ridge, Lasso, ElasticNet
+- Decision Tree, Random Forest, Gradient Boosting, XGBoost
+
+Metrics: RMSE, MAE, R², RMSLE (+ cross-validation).
+
+## Dataset
+
+- Source style: [Kaggle House Prices - Advanced Regression Techniques](https://www.kaggle.com/c/house-prices-advanced-regression-techniques/data)
+- File: `data.csv` (1,460 rows × 81 columns including `SalePrice`)
