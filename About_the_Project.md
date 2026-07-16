@@ -58,8 +58,7 @@ Additional reference files in this repo:
 - Tree-based boosting models (especially **XGBoost**) generally performed best.
 
 ## Main deliverable
-- `House_Price_Prediction_Internship.ipynb` — full internship notebook (analysis + models + comparison + challenges)  
-  *(Available on the project feature branch / PR; merge if you want it on main.)*
+- `House_Price_Prediction.ipynb` — full internship deliverable in **one** notebook (EDA + preprocessing + models + GridSearchCV + comparison + challenges + conclusion)
 
 ## Tools & libraries
 - Python, Jupyter Notebook

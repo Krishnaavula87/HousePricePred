@@ -7,14 +7,13 @@ Predict residential **SalePrice** from the Ames Housing dataset (`data.csv`), ba
 
 > Note: The PRCP brief uses a car-price example, but this repository’s dataset is **house prices**. This project applies the same internship deliverables to the house-price data provided here.
 
-## Notebooks
+## Notebook (single deliverable)
 
 | Notebook | Description |
 |----------|-------------|
-| **`House_Price_Prediction_Internship.ipynb`** | Full internship notebook (EDA, models including XGBoost, comparison, challenges) |
-| **`House_Price_Prediction.ipynb`** | Mini-project notebook (EDA, models, comparison, challenges) |
+| **`House_Price_Prediction.ipynb`** | Full project in one file: EDA (with modeling implications), preprocessing, GridSearchCV-tuned models, comparison, interpretability, challenges, and conclusion |
 
-Both follow the required structure:
+Required structure covered in this notebook:
 1. Complete data analysis (EDA) report
 2. Predictive models for `SalePrice`
 3. Model comparison report + production recommendation
@@ -24,12 +23,6 @@ Both follow the required structure:
 
 ```bash
 pip install -r requirements.txt
-jupyter notebook House_Price_Prediction_Internship.ipynb
-```
-
-Or open the mini-project notebook:
-
-```bash
 jupyter notebook House_Price_Prediction.ipynb
 ```
 
@@ -37,6 +30,7 @@ jupyter notebook House_Price_Prediction.ipynb
 
 - Linear Regression, Ridge, Lasso, ElasticNet
 - Decision Tree, Random Forest, Gradient Boosting, XGBoost
+- GridSearchCV-tuned Ridge, Random Forest, Gradient Boosting, XGBoost
 
 Metrics: RMSE, MAE, R², RMSLE (+ cross-validation).
 
