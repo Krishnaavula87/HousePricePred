@@ -32,17 +32,17 @@ Additional reference files in this repo:
 
 ## What was done (project workflow)
 1. **Exploratory Data Analysis (EDA)**  
-   Checked missing values, target distribution, correlations, neighborhoods, and outliers.
+   Checked missing values, target distribution, correlations, neighborhoods, and outliers — with each finding linked to a concrete preprocessing or modeling choice (e.g. skew → log target, rare neighborhoods → sparsity risk).
 2. **Data cleaning**  
-   Handled missing values carefully (many “missing” values mean an amenity is absent, e.g. no pool / no alley).
+   Handled missing values carefully (many “missing” values mean an amenity is absent, e.g. no pool / no alley). Used **median** (not mean) for skewed `LotFrontage`.
 3. **Feature engineering**  
    Created useful features like total square feet, total bathrooms, house age, porch area, etc.
 4. **Model building**  
-   Trained several regression models on a log-transformed sale price.
-5. **Model comparison**  
-   Compared models using RMSE, MAE, R², and RMSLE.
+   Trained several regression models on a log-transformed sale price, plus **GridSearchCV** tuning for Ridge, Random Forest, Gradient Boosting, and XGBoost.
+5. **Model comparison & interpretability**  
+   Compared models using RMSE, MAE, R², and RMSLE; explained drivers via feature importances and Ridge coefficients.
 6. **Final recommendation**  
-   Selected the best-performing model for predictions and kept a simpler model for easier business explanation.
+   Selected the best-performing (usually tuned ensemble) model for predictions and kept Ridge for easier business explanation, with quantified future-work ideas.
 
 ## Models used
 - Linear Regression
